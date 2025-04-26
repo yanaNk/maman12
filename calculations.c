@@ -20,7 +20,7 @@ int is_magic_square(int matrix[MAGIC_SIZE][MAGIC_SIZE]) {
             int row_value = matrix[i][j];
             int column_value = matrix[j][i];
 
-            if (validate_number_in_range(row_value) == 0 || existing_values[row_value] != 0) {
+            if (validate_number_in_range(row_value) != 0 || existing_values[row_value] != 0) {
                 free(existing_values);
                 return 1;
             }

@@ -1,18 +1,12 @@
 #include <stdio.h>
 #include "magic.h"
 #include <stdlib.h>
+#include "limits.h"
 
-
-int is_valid_int(const char *str) {
-    char *non_digit_part;
-    long actual_value;
-    errno = 0;
-    actual_value = strtol(str, &non_digit_part, 10);
-
-    return errno == 0 &&
-           *non_digit_part == '\0' &&
-           actual_value >= INT_MIN &&
-           actual_value <= INT_MAX;
+int is_valid_int(int value) {
+    return
+           value >= INT_MIN &&
+           value <= INT_MAX;
 }
 
 
