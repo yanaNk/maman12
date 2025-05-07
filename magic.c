@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include "magic.h"
 
-
+/* Description:
+ * user enters input and the function print the matrix and whenever it is magic square
+ */
 int main() {
     int matrix[MAGIC_SIZE][MAGIC_SIZE];
     printf("Please enter %d numbers \n",MATRIX_NUMBER_VALUES);
